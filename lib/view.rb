@@ -369,7 +369,7 @@ module JqgridView
     # When data are loaded into the grid, call the Javascript function options[:grid_loaded] (defined by the user)
 	def grid_loaded_options (callback)
 		if callback = @grid_options.delete(callback)
-			add_event :loadComplete, Javascript.new("function() {{#{callback}()}"
+			add_event :loadComplete, Javascript.new("function() {{#{callback}()}")
 		end
 	end
 
